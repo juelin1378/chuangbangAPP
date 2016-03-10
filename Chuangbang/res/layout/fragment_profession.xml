@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80">
+        
+        
+    
+	
+ <LinearLayout 
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:paddingLeft="5dp"
+     android:paddingRight="5dp"
+     android:paddingTop="6dp"
+     android:orientation="vertical">
+      <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text=" 收费模式与标准"
+        
+         />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="一：300元约谈投资一次"
+        android:layout_marginTop="5dp"
+         android:textColor="#31A5E7"
+        />
+    
+    <TextView
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="二：3000元"
+        android:layout_marginTop="5dp"
+         android:textColor="#31A5E7"
+        />
+    
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="1:3-6个月完成融资对接0风险退回服务费服务"
+        android:layout_marginTop="5dp"
+        />
+    
+    <TextView
+        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="2:邀请参加2次高端投行路演｛北上广深｝"
+        android:layout_marginTop="5dp"
+        />
+    
+    <TextView
+     
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="3:项目融资策划书撰写指导"
+        android:layout_marginTop="5dp"
+        />
+    
+    <TextView
+       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="4:谈判对接"
+        android:layout_marginTop="5dp"
+        />
+    
+    <TextView
+     
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="5:人力资源对接｛运营，技术｝"
+        android:layout_marginTop="5dp"
+        />
+    
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="7:市场调研报告"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="8:推荐国家级孵化器进驻邀请"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="三：8000元"
+        android:layout_marginTop="5dp"
+         android:textColor="#31A5E7"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="1:3-6个月内完成融资对接0风险退回服务费服务"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="2:邀请3次高端路演酒会｛北上广深｝"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="3:项目策划书撰写指导与市场分析推演报告"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="4:推荐国家级孵化器进驻邀请"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="5:谈判对接"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="6:人力资源对接｛运营，技术｝"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="7:清华，北大，中科院，博士后团队论坛与导师服务"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="8:制定A轮融资计划"
+        android:layout_marginTop="5dp"
+        />
+     <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="9:项目资源兼并"
+        android:layout_marginTop="5dp"
+        />
+      <TextView
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="10:知识产权顾问服务"
+        android:layout_marginTop="5dp"
+        />
+ </LinearLayout>
+ 
+ </ScrollView>
+ 
+  <LinearLayout 
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:layout_weight="20"
+     android:orientation="vertical"
+     android:gravity="center"
+    >
+     <Button
+        android:id="@+id/btn_applicat_server"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="申请服务" />
+ </LinearLayout>
+
+    
+
+   
+    
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	 <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/light_blue"
+        android:gravity="center_vertical" >
+
+      
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/tr_set_website_construction"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_set_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_marginRight"
+            android:clickable="true"
+            android:text="@string/tv_set_confirm"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 模板建站 -->
+
+            <Button
+                android:id="@+id/btn_template_site"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_template_site"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 网站二次开发 -->
+
+            <Button
+                android:id="@+id/btn_web_site_two_development"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_web_site_two_development"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 网站定制开发 -->
+
+            <Button
+                android:id="@+id/btn_web_custom_development"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_web_custom_development"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 前端开发 -->
+
+            <Button
+                android:id="@+id/btn_front_end_development"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_front_end_development"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 网站测试 -->
+
+            <Button
+                android:id="@+id/btn_web_testing"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_web_testing"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 网站维护 -->
+
+            <Button
+                android:id="@+id/btn_website_maintenance"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_website_maintenance"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 企业网站 -->
+
+            <Button
+                android:id="@+id/btn_enterprise_website"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_enterprise_website"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 电商网站 -->
+
+            <Button
+                android:id="@+id/btn_electricity_supplier_website"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_electricity_supplier_website"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 金融理财网站 -->
+
+            <Button
+                android:id="@+id/btn_financial_management_website"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_financial_management_website"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- Flash网站 -->
+
+            <Button
+                android:id="@+id/btn_flash_website"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_flash_website"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 政府网站 -->
+
+            <Button
+                android:id="@+id/btn_government_website"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_government_website"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 其他 -->
+
+            <Button
+                android:id="@+id/btn_others"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_others"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

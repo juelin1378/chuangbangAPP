@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+        <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:background="@color/light_blue"
+        android:gravity="center_vertical" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/tr_set_wechat_or_App"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_set_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_marginRight"
+            android:clickable="true"
+            android:text="@string/tv_set_confirm"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 安卓APP -->
+
+            <Button
+                android:id="@+id/btn_android_app"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_android_app"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 苹果APP -->
+
+            <Button
+                android:id="@+id/btn_iphone_app"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_iphone_app"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 微信开发 -->
+
+            <Button
+                android:id="@+id/btn_wechat_development"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_wechat_development"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 企业APP -->
+
+            <Button
+                android:id="@+id/btn_enterprise_app"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_enterprise_app"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 社交APP -->
+
+            <Button
+                android:id="@+id/btn_social_contact_app"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_social_contact_app"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 娱乐APP -->
+
+            <Button
+                android:id="@+id/btn_entertainment_app"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_entertainment_app"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 点餐APP -->
+
+            <Button
+                android:id="@+id/btn_order_app"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_order_app"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 生鲜电商APP -->
+
+            <Button
+                android:id="@+id/btn_fresh_electricity_suppliers_ap"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_fresh_electricity_suppliers_ap"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 旅游APP -->
+
+            <Button
+                android:id="@+id/btn_tourism_app"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_tourism_app"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 新闻咨询APP -->
+
+            <Button
+                android:id="@+id/btn_newsi_nformation_app"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_newsi_nformation_app"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 其他APP -->
+
+            <Button
+                android:id="@+id/btn_others"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:text="@string/btn_others"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp" />
+            <!-- 隐藏的Button -->
+
+            <Button
+                android:id="@+id/btn_hide"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_application_development"
+                android:textColor="@color/gray_checking"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回" 
+                android:onClick="doClick"/>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/bt_back"
+                android:layout_alignBottom="@+id/bt_back"
+                android:layout_centerHorizontal="true"
+                android:text="项目详情" />
+
+            <Button
+                android:id="@+id/bt_df"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="待定" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:orientation="vertical" >
+        <!-- 水平层框架 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="80"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="30"          
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_see_one_project_avater"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher" 
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="70"
+                android:orientation="vertical" >
+
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                     <TextView
+                    android:id="@+id/tv_see_one_project_proname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会健身" 
+                    android:textSize="20dp"
+                    android:textColor="#5CA5E7"
+                    />
+                     <TextView 
+                         android:id="@+id/tv_see_one_project_location"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="广州"
+                         android:gravity="center"
+                         android:textColor="#5CA5E7"
+                         />
+                    
+                </LinearLayout>
+               
+                <TextView
+                    android:id="@+id/tv_see_one_project_procontname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="创始人" 
+                    android:textColor="#5CA5E7"
+                    />
+            </LinearLayout>
+            
+        </LinearLayout>
+     <!-- 水平层框架结束 -->
+     
+     
+     <!-- 状态、领域、网址卡栏 -->
+     <LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="30"
+         android:orientation="horizontal"
+         >
+         <TextView
+             android:id="@+id/tv_see_one_project_prostate"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:paddingLeft="30dp"
+             android:text="已运营|移动互联网"
+             android:textColor="#5CA5E7" />        
+         <TextView 
+             android:id="@+id/tv_see_one_project_link"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+             android:text="www.dfjdkf.conm"
+             android:gravity="right"
+             
+             />
+         
+     </LinearLayout>
+        <!-- 状态、领域、网址卡栏 结束-->
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="75"
+        android:orientation="vertical"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="9dp"
+            android:text="项目详情"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tv_see_one_project_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp"
+            android:text="上课地方哈李虎大师傅哈上的纠纷 啊圣诞节佛ie文件 啊圣诞节发生激烈的反对浪费金额啊是的飞机场V哦啊大家佛爱上的发激发绝大多数I骄傲的就欧耶" />
+    </LinearLayout>
+
+</LinearLayout>

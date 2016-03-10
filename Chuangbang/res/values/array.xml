@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="lan">
+        <item>商标注册</item>
+        <item>专利申请</item>
+        <item>版权登记</item>
+        <item>高新认证</item>
+       
+    </string-array>
+
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+      <!-- 地区边框顶部开始 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#3474BB" >
+
+        <TextView
+            android:id="@+id/tv_personal_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:gravity="center_vertical"
+            android:paddingTop="14dp"
+            android:text="个人信息"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="12dp"
+            android:text="地区"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <!-- 地区边框顶部结束 -->
+
+
+    <!-- GPS定位和全部边框开始 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+
+        <TextView
+            android:id="@+id/tv_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="GPS定位"
+            android:textColor="#A0D5DF"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#EDEEF2" >
+
+        <TextView
+            android:id="@+id/tv_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="8dp"
+            android:text="全部"
+            android:textColor="#A4A5A9"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <!-- GPS定位和全部边框开始 -->
+
+
+    <!-- 全国各省份Listvew开始 -->
+
+    <ListView
+        android:id="@+id/lv_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#E6E6E6" >
+    </ListView>
+    <!-- 全国各省份Listvew结束 -->
+    
+
+</LinearLayout>

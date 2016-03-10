@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp" >
+
+        <ImageView
+            android:id="@+id/iv_businees_avater"
+            android:layout_width="50dp"
+            android:layout_height="50dp" 
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/ic_launcher"/>
+       
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_business_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目名称"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_business_domain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目领域标签"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_business_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="我的项目简介"
+            android:layout_marginTop="8dp"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <!-- 点赞、评论 -->
+
+    <LinearLayout
+        android:id="@+id/ll_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" 
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/tv_business_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:textColor="#AAA5A5"
+             />
+
+        <TextView
+            android:id="@+id/tv_business_favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20" 
+            android:text="收藏人数"
+            android:textColor="#AAA5A5"/>
+
+        <TextView
+            android:id="@+id/tv_business_comments"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="20"
+            android:text="评论人数"
+            android:textColor="#AAA5A5"
+            
+            />
+    </LinearLayout>
+
+</LinearLayout>

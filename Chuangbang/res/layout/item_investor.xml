@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    >
+     <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_weight="30"
+        android:orientation="vertical" 
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_item_investor_avater"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_launcher" 
+            
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_item_investor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投资人姓名"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_item_verified_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="认证签名" 
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_item_investment_domain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="领域标签" 
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_item_investment_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="偏好设置融资阶段" 
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:orientation="vertical" 
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_item_investor_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+          
+            android:text="发起约谈" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="chuangbang.activity.RefuseMeetingActivity" >
+
+    <TextView
+        android:id="@+id/tv_refuse_meet_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拒绝的理由"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/sv_ckeckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_refuse_meet_save"
+        android:layout_below="@+id/tv_refuse_meet_title" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/rg_refuse_meet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/cb_refuse_meet_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="团队完整度有待提高" />
+
+                <CheckBox
+                    android:id="@+id/cb_refuse_meet_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="市场痛点没有解决" />
+
+                <CheckBox
+                    android:id="@+id/cb_refuse_meet_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商业模式需要加强" />
+
+                <CheckBox
+                    android:id="@+id/cb_refuse_meet_04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="市场调研报告" />
+
+                <CheckBox
+                    android:id="@+id/cb_refuse_meet_05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="估值错误" />
+
+                <CheckBox
+                    android:id="@+id/cb_refuse_meet_06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商业策划书和融资资策划案需加强" />
+
+                <CheckBox
+                    android:id="@+id/cb_refuse_meet_07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="市场刚需和接受程度需观察" />
+
+                <CheckBox
+                    android:id="@+id/cb_refuse_meet_08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="项目过于早期" />
+
+                <CheckBox
+                    android:id="@+id/cb_refuse_meet_09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/et_refuse_meet_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:lines="6" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_refuse_meet_save"
+        style="@style/btn_style"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:text="提交" />
+
+</RelativeLayout>

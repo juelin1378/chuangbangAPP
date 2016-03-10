@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="chuangbang.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 环信权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- <activity android:name="chuangbang.activity.WelcomeActivity" > -->
+    <application
+        android:name="chuangbang.app.ChuangApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity android:name=".WelcomeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegistActivity" />
+        <activity android:name=".SettingMine" >
+        </activity>
+        <activity android:name=".SetMineName" >
+        </activity>
+        <activity android:name=".SetMinePosition" >
+        </activity>
+        <activity android:name=".SetMineEmail" >
+        </activity>
+        <!-- 注册公司 -->
+        <activity android:name=".RegistCompany" >
+        </activity>
+        <activity android:name=".MyProject" >
+        </activity>
+        <activity android:name=".NewMyProject" >
+        </activity>
+        <activity android:name=".SetMineCellphone" >
+        </activity>
+        <activity android:name=".SetMineRecord" >
+        </activity>
+        <activity android:name=".SetMineArea" >
+        </activity>
+        <activity android:name=".SeeOneProject" >
+        </activity>
+        <activity android:name=".WhatNewActivity" >
+        </activity>
+        <activity android:name=".MyStatus" >
+        </activity>
+        <activity android:name=".SendMineStatus" >
+        </activity>
+        <!-- 申请开发页面 -->
+        <activity android:name=".ApplyForDevelop" >
+        </activity>
+        <!-- 微信或app开发 -->
+        <activity android:name=".MicroMsgOrAppDevelop" >
+        </activity>
+        <!-- 网站开发 -->
+        <activity android:name=".WebDevelop" >
+        </activity>
+        <!-- 进驻孵化器 -->
+        <activity android:name=".ApplyIncubator" >
+        </activity>
+        <!-- 会计做账 -->
+        <activity android:name=".MakeAccount" >
+        </activity>
+        <!-- 法律资讯 -->
+        <activity android:name=".LegalAdvice" >
+        </activity>
+        <!-- 知识产权 -->
+        <activity android:name=".IntellectualProperty" >
+        </activity>
+        <!-- 我的简历 -->
+        <activity android:name=".MineResume" >
+        </activity>
+        <!-- 教育经历 -->
+        <activity android:name=".EducationalBackground" >
+        </activity>
+        <!-- 工作经历 -->
+        <activity android:name=".WorkExperience" >
+        </activity>
+        <!-- 个人优势 -->
+        <activity android:name=".MyGoodnes" >
+        </activity>
+        <!-- 底部菜单 -->
+        <activity
+            android:name=".MenuDialog"
+            android:theme="@style/MyDialogBottom" >
+        </activity>
+        <!-- 新建项目时的底部菜单 -->
+        <activity 
+            android:name="chuangbang.activity.ImageFromNewPro"
+            android:theme="@style/MyDialogBottom">    
+        </activity>
+        <activity android:name="com.example.testpic.ImageGridActivity" >
+        </activity>
+        <activity android:name="com.example.testpic.PublishedActivity" >
+        </activity>
+        <activity android:name="com.example.testpic.PhotoActivity" >
+        </activity>
+        <activity android:name="com.example.testpic.TestPicActivity" >
+        </activity>
+
+        <!-- 发评论 -->
+        <activity android:name=".CommentActivity" >
+        </activity>
+        <!-- 我的收藏 -->
+        <activity android:name=".MyFavorite" >
+        </activity>
+        <activity android:name=".InvestorDetailsActivity" >
+        </activity>
+        <activity android:name=".MeetingDetailActivity" >
+        </activity>
+        <activity android:name=".MyMeetingActivity" >
+        </activity>
+        <activity android:name=".AgreeMeetingActivity" >
+        </activity>
+        <!-- 我的项目详细页面 -->
+        <activity android:name="chuangbang.activity.MyProDetailsActivity"></activity>
+        <!-- 合伙人详细页面 -->
+		<activity android:name="chuangbang.activity.PartnerActivity"></activity>
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="chuangbang#chuangbangchat" />
+        <!-- 声明sdk所需的service SDK核心功能 -->
+        <service android:name="com.easemob.chat.EMChatService" />
+
+        <activity
+            android:name=".ProjectDetailsActivity"
+            android:label="@string/title_activity_project_details" >
+        </activity>
+        <activity
+            android:name=".RefuseMeetingActivity"
+            android:label="@string/title_activity_refuse_meeting" >
+        </activity>
+    </application>
+
+</manifest>

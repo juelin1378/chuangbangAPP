@@ -74,6 +74,7 @@ public class ChuangApp extends Application{
 		.denyCacheImageMultipleSizesInMemory()
 		.diskCacheFileNameGenerator(new Md5FileNameGenerator()) //将保存的时候的URI名称用MD5 加密
 		.memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024)) // /你可以通过自己的内存缓存实现
+		
 		.memoryCacheSize(2 * 1024 * 1024) // 内存缓存的最大值
 		.diskCacheSize(50 * 1024 * 1024)  // 50 Mb sd卡(本地)缓存的最大值
 		.tasksProcessingOrder(QueueProcessingType.LIFO)

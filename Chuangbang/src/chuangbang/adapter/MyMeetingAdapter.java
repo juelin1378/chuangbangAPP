@@ -60,6 +60,7 @@ public class MyMeetingAdapter extends BaseAdapter {
 				.showImageOnFail(R.drawable.ic_error) // 设置图片加载或解码过程中发生错误显示的图片
 				.cacheInMemory(true) // 设置下载的图片是否缓存在内存中
 				.cacheOnDisk(true) // 设置下载的图片是否缓存在SD卡中
+				.considerExifParams(true)//是否考虑JPEG图像EXIF参数（旋转，翻转）
 				.displayer(new RoundedBitmapDisplayer(1)) // 设置成圆角图片
 				.bitmapConfig(Bitmap.Config.RGB_565).build(); // 构建完成
 		app = ChuangApp.getApp();// 获取app对象

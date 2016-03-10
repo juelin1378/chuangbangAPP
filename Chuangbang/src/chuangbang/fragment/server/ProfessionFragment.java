@@ -44,16 +44,19 @@ public class ProfessionFragment extends Fragment implements OnClickListener{
 	}
 	@Override
 	public void onClick(View arg0) {
-		//Toast.makeText(getActivity(), "该功能未实现", Toast.LENGTH_SHORT).show();
-		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		Log.i("pf", "当前的项目数："+pros.size());
 		String[] items = null;
 		if(pros.size()==3){
 			items = new String[]{pros.get(0).getName(),pros.get(1).getName(),pros.get(2).getName()};
 		}else if(pros.size()==2){
 			items = new String[]{pros.get(0).getName(),pros.get(1).getName()};
-		}else{
+		}else if(pros.size()==1){
 			items = new String[]{pros.get(0).getName()};
+		}else if(pros.size()==0){
+			Toast.makeText(getActivity(), "你没有项目可投，请先去创建项目吧", Toast.LENGTH_LONG).show();
+			return;
 		}
+		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 		builder.setTitle("选择你投资的项目");
 		builder.setItems(items, new DialogInterface.OnClickListener() {
 			
@@ -94,6 +97,7 @@ public class ProfessionFragment extends Fragment implements OnClickListener{
 			@Override
 			public void onSuccess(List<Project> projects) {
 				// TODO Auto-generated method stub
+				//Log.i("pf", "当前的项目数："+projects.size());
 				pros.clear();
 				pros.addAll(projects);
 			}

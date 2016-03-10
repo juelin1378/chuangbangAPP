@@ -1,4 +1,4 @@
-package chuangbang.activity;
+﻿package chuangbang.activity;
 
 
 import java.io.File;
@@ -39,6 +39,10 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
+<<<<<<< HEAD
+import android.widget.Advanceable;
+=======
+>>>>>>> refs/remotes/origin/master
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,14 +54,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class NewMyProject extends Activity implements OnClickListener,Final,  OnItemSelectedListener{
+
 	private TableRow trProLogo;
 	private ImageView logoImage;
 
 	private Handler handler;
 	private EditText etProName,etProState,etProDomain,etProDescription,etPainPointer,etSolution,etCompetiors,etAdvantage,
-	etBusinessModel,etFinancingAmount,etTransferShare,etTermNumCount;;
+
+	etBusinessModel,etFinancingAmount,etTransferShare,etTermNumCount;
+
 	private String result,proName,proState,proDomain,proDescString,painPointer,solution,competiors,adavantage,busenessModel;
-	private Integer financingAmount,financingStater,termNumCount;
+	private Integer financingAmount,financingStater,termNumCount,transferShare;
 
 	private BroadcastReceiver receiver;
 	private Bitmap image;
@@ -87,7 +94,7 @@ public class NewMyProject extends Activity implements OnClickListener,Final,  On
 		etBusinessModel=(EditText)findViewById(R.id.et_new_pro_business_model);
 		etFinancingAmount=(EditText)findViewById(R.id.et_new_pro_financing_amount);
 		etTransferShare=(EditText)findViewById(R.id.et_new_pro_transferShare);
-		
+
 		trProLogo=(TableRow)findViewById(R.id.tr_new_pro_logo);
 		btBack=(Button)findViewById(R.id.bt_new_pro_back);
 		btSave=(Button)findViewById(R.id.bt_new_pro_save);
@@ -260,35 +267,71 @@ public class NewMyProject extends Activity implements OnClickListener,Final,  On
 		proState=etProState.getText().toString();
 		proDescString=etProDescription.getText().toString();
 		proDomain=etProDomain.getText().toString();
+		
+		
+		
+		
+		
 		if(proName.length()==0){
 			html1 = Html.fromHtml("<font color='black'>名字不能为空</font>");
 			etProName.setError(html1);
+			Toast.makeText(NewMyProject.this, "名字不能为空", Toast.LENGTH_LONG).show();
 			return ;
 		}
 		if(proState.length()==0){
 			html1 = Html.fromHtml("<font color='black'>项目状态不能为空</font>");
 			etProState.setError(html1);
+			Toast.makeText(NewMyProject.this, "项目状态不能为空", Toast.LENGTH_LONG).show();
 			return;
 		}
 		if(proDescString.length()==0){
 			html1 = Html.fromHtml("<font color='black'>项目简介不能为空</font>");
 			etProDescription.setError(html1);
+			Toast.makeText(NewMyProject.this, "项目简介不能为空", Toast.LENGTH_LONG).show();
 			return ;
 		}
 		if(proDomain.length()==0){
 			html1 = Html.fromHtml("<font color='black'>经营范围不能为空</font>");
 			etProDomain.setError(html1);
+			Toast.makeText(NewMyProject.this, "经营范围不能为空", Toast.LENGTH_LONG).show();
 			return ;
 		}
-		
+		if(etTermNumCount.getText().toString().length()==0){
+			html1 = Html.fromHtml("<font color='black'>团队人数不能为空</font>");
+			etTermNumCount.setError(html1);
+			Toast.makeText(NewMyProject.this, "团队人数不能为空", Toast.LENGTH_LONG).show();
+			return ;
+		}
+		termNumCount=Integer.parseInt(etTermNumCount.getText().toString());
 		painPointer=etPainPointer.getText().toString();
 		solution=etSolution.getText().toString();
 		competiors=etCompetiors.getText().toString();
 		adavantage=etAdvantage.getText().toString();
-		pro.setName(proName);
+		busenessModel=etBusinessModel.getText().toString();
+		
+		pro.setName(proName);//项目名
 		pro.setDescription(proDescString);
 		pro.setDomain(proDomain);
 		pro.setState(proState);
+		pro.setProTermNumCount(termNumCount);
+		pro.setPainPointer(painPointer);
+		pro.setSolution(solution);
+		pro.setCompetitors(competiors);
+		pro.setAdvantage(adavantage);
+		pro.setFinancingState(financingStater);
+		pro.setFinancingAmount(financingAmount);
+		pro.setTransferShare(transferShare);
+		pro.setBusinessModel(busenessModel);
+		if(etFinancingAmount.getText().toString().length()!=0)
+			financingAmount=Integer.parseInt(etFinancingAmount.getText().toString());
+		if(etTransferShare.getText().toString().length()!=0)
+			transferShare=Integer.parseInt(etTransferShare.getText().toString());
+			
+		
+		pro.setCommentCount(0);//评论数至0
+		pro.setFavoriteUserCount(0);//收藏数至0
+		
+		
 		if(bmobFile!=null){
 
 			Log.i("Pro", "bmobFile判空"+bmobFile.toString());

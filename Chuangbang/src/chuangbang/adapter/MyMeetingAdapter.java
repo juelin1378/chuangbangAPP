@@ -84,8 +84,22 @@ public class MyMeetingAdapter extends BaseAdapter {
 		if (meet != null) {
 			if (meet.getProject().getName() != null)
 				holder.tvProName.setText(meet.getProject().getName());
-			if (meet.getState() != null)
-				holder.tvMeetState.setText("约谈状态      " + meet.getState());
+			if (meet.getState() != 0){
+				int state = meet.getState();
+				String str = null;
+				if(state==1){
+					str = "已发送";
+				}else if(state==2){
+					str = "已读";
+				}else if(state==3){
+					str = "同意";
+				}else if(state==4){
+					str = "拒绝";
+				}else{
+					str = "已回复";
+				}
+				holder.tvMeetState.setText("约谈状态      " + str);
+			}
 			if (meet.getProject().getLogo() != null)
 				app.getImageLoader().displayImage(
 						meet.getProject().getLogo().getFileUrl(context),

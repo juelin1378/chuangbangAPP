@@ -111,6 +111,7 @@ public class InvestorDetailsActivity extends Activity implements OnClickListener
 		List<BmobQuery<Meeting>> and = new ArrayList<BmobQuery<Meeting>>();
 		SimpleDateFormat sdf0 = new SimpleDateFormat("yyyy-MM-dd");
 		String time = sdf0.format(new Date());
+		Log.i("time", "当前日期"+time);
 		
 		//大于00：00：00
 		BmobQuery<Meeting> q1 = new BmobQuery<Meeting>();
@@ -156,8 +157,7 @@ public class InvestorDetailsActivity extends Activity implements OnClickListener
 			public void onSuccess(List<Meeting> mes) {
 				// TODO Auto-generated method stub
 				Log.i("send", "查询成功："+mes.size());
-				if(mes.size()<3){
-					//sendMeeting();
+				if(mes.size()<3 && mes.size()>=0){
 					handler.sendEmptyMessage(0x1233);
 				}else{
 					Toast.makeText(InvestorDetailsActivity.this, "今天你的约谈已经3次了，等明天在约谈", Toast.LENGTH_SHORT).show();
@@ -176,8 +176,11 @@ public class InvestorDetailsActivity extends Activity implements OnClickListener
 			items = new String[]{pros.get(0).getName(),pros.get(1).getName(),pros.get(2).getName()};
 		}else if(pros.size()==2){
 			items = new String[]{pros.get(0).getName(),pros.get(1).getName()};
-		}else{
+		}else if(pros.size()==1){
 			items = new String[]{pros.get(0).getName()};
+		}else if(pros.size()==0){
+			Toast.makeText(InvestorDetailsActivity.this, "你没有项目可投，请先去创建项目吧", Toast.LENGTH_LONG).show();
+			return;
 		}
 		final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle("选择你约谈的项目？");

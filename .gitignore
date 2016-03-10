@@ -69,3 +69,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 Chuangbang/bin/R.txt
+Chuangbang/bin/Chuangbang.apk
+Chuangbang/bin/dexedLibs/xUtils-2.6.14-e4d558e6ee42c5abdf3d89d5181b9a47.jar
+Chuangbang/bin/dexedLibs/gson-2.2.4-5913902082e208ccb39cfad506f88651.jar
+Chuangbang/bin/resources.ap_
+*.ap_
+*.apk
+Chuangbang/bin/classes.dex
+*.jar

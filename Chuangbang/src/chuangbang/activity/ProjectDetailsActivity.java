@@ -163,9 +163,9 @@ public class ProjectDetailsActivity extends Activity implements OnClickListener 
 		tvProCompetitors.setText(currentPro.getCompetitors());
 		tvProAdvantage.setText(currentPro.getAdvantage());
 		tvProBusinessModel.setText(currentPro.getBusinessModel());
-		tvProFinancingAmount.setText(currentPro.getFinancingAmount());
+		tvProFinancingAmount.setText(currentPro.getFinancingAmount()+"");
 		// tvProFinancingState.setText(currentPro.getFinancingState());
-		tvProSransferShare.setText(currentPro.getTransferShare());
+		tvProSransferShare.setText(currentPro.getTransferShare()+"");
 
 		favoriteCount = currentPro.getFavoriteUserCount();
 		commentCount = currentPro.getCommentCount();

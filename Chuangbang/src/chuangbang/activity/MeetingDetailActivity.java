@@ -1,10 +1,13 @@
 package chuangbang.activity;
 
+import com.google.gson.Gson;
+
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.GetListener;
 import cn.bmob.v3.listener.UpdateListener;
 import chuangbang.entity.Meeting;
+import chuangbang.entity.RefuseReasons;
 import chuangbang.entity.User;
 import android.app.Activity;
 import android.app.SearchManager.OnCancelListener;
@@ -63,13 +66,59 @@ public class MeetingDetailActivity extends Activity implements android.view.View
 				tvApplyName.setText(me.getApplyUser().getNickName());
 				tvInviteName.setText(me.getInviteUser().getNickName());
 				tvApplyContent.setText(me.getApplyText());
-				tvState.setText(me.getState()+"");
+				if(me.getState()==1){
+					tvState.setText("已发送");
+				}
+				if(me.getState()==2){
+					tvState.setText("已读");
+				}
+				if(me.getState()==3){
+					tvState.setText("同意");
+				}
+				if(me.getState()==4){
+					tvState.setText("拒绝");
+				}
+				if(me.getState()==5){
+					tvState.setText("已回复");
+				}
+				//申请人Id
+				String applyId = me.getApplyUser().getObjectId();
+				//受邀人Id
+				String inviteUserId = me.getInviteUser().getObjectId();
+				//当前用户
+				User currentUser = BmobUser.getCurrentUser(MeetingDetailActivity.this, User.class);
+				//当前用户Id
+				String currentUserId = currentUser.getObjectId();
+				//当受邀人是当前用户时，并且状态是1  时 ，状态将改变成2
+				if (inviteUserId!=null && inviteUserId.equals(currentUserId)) {
+					if( me.getState()==1){
+						tvState.setText("已读");
+						update(me,2);
+					}
+					//当申请人是当前用户时
+				} else if(applyId!=null && applyId.equals(currentUserId)){
+					btnAgree.setVisibility(View.GONE);
+					btnRefuse.setVisibility(View.GONE);
+					if(me.getState() == 3){
+						update(me, 5);
+						tvState.setText("已回复");
+					}
+					if(me.getState() == 4){
+						tvState.setText("拒绝");
+						Gson gson = new Gson();
+						String text = gson.toJson(me.getRefuseResource(), RefuseReasons.class);
+						tvApplyContent.setText(text);
+					}
+				}else{
+					btnAgree.setVisibility(View.GONE);
+					btnRefuse.setVisibility(View.GONE);
+				}
 			}
 		});
 	}
 
 	private void initView(Meeting meet) {
-		String inviteUserId = meet.getInviteUser().getObjectId();
+		//	String inviteUserId = meet.getInviteUser().getObjectId();
 		
 
 		tvCreateDate = (TextView) findViewById(R.id.tv_meeting_detail_date);
@@ -88,23 +137,23 @@ public class MeetingDetailActivity extends Activity implements android.view.View
 //		Log.i("meeting", "受邀人姓名："+meet.getInviteUser().getNickName());
 //		Log.i("meeting", "状态："+meet.getState());
 //		Log.i("meeting", "留言："+meet.getApplyText());
-		
-		tvCreateDate.setText(meet.getCreatedAt());
-		tvApplyName.setText(meet.getApplyUser().getNickName());
-		tvInviteName.setText(meet.getInviteUser().getNickName());
-		tvApplyContent.setText(meet.getApplyText());
-		tvState.setText(meet.getState()+"");
-		
-		if (inviteUserId!=null && inviteUserId.equals(BmobUser.getCurrentUser(this, User.class).getObjectId())) {
-			if( meet.getState()==1){
-				tvState.setText("2");
-				update(meet,2);
-			}
-		} else {
-			tvState.setText(meet.getState() + "");
-			btnAgree.setVisibility(View.GONE);
-			btnRefuse.setVisibility(View.GONE);
-		}
+//		
+//		tvCreateDate.setText(meet.getCreatedAt());
+//		tvApplyName.setText(meet.getApplyUser().getNickName());
+//		tvInviteName.setText(meet.getInviteUser().getNickName());
+//		tvApplyContent.setText(meet.getApplyText());
+//		tvState.setText(meet.getState()+"");
+//		
+//		if (inviteUserId!=null && inviteUserId.equals(BmobUser.getCurrentUser(this, User.class).getObjectId())) {
+//			if( meet.getState()==1){
+//				tvState.setText("2");
+//				update(meet,2);
+//			}
+//		} else {
+//			tvState.setText(meet.getState() + "");
+//			btnAgree.setVisibility(View.GONE);
+//			btnRefuse.setVisibility(View.GONE);
+//		}
 		
 	}
 	

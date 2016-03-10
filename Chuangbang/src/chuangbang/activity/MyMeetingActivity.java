@@ -45,6 +45,7 @@ public class MyMeetingActivity extends Activity implements OnItemClickListener{
 		
 		lvMeeting.setOnItemClickListener(this);
 		
+		
 	}
 	
 	@Override

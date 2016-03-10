@@ -43,7 +43,7 @@ public class MyProDetailsActivity extends Activity implements OnClickListener,Fi
 	private ChuangApp app;
 	//我的项目object
 	private String myProObject;
-	private boolean isCheck;
+	private boolean isCheck=false;
 
 
 
@@ -113,7 +113,7 @@ public class MyProDetailsActivity extends Activity implements OnClickListener,Fi
 
 		//首先把更新按钮设为不可用
 		btUpdate.setEnabled(false);
-
+		isCheck=false;
 
 
 
@@ -169,9 +169,13 @@ public class MyProDetailsActivity extends Activity implements OnClickListener,Fi
 		case R.id.bnt_activity_my_project_update:
 			update();
 			break;
+			
+			
 			//返回按钮
 		case R.id.bnt_activity_my_project_back:
+			
 			if(isCheck){
+				
 				new AlertDialog.Builder(MyProDetailsActivity.this).setTitle("警告！").setMessage("您要放弃已经做的修改吗？").setIcon(android.R.drawable.ic_dialog_info).
 				setPositiveButton("确定", new DialogInterface.OnClickListener() {
 
@@ -181,7 +185,10 @@ public class MyProDetailsActivity extends Activity implements OnClickListener,Fi
 
 					}
 				}).setNegativeButton("取消",null).show();
+			}else{
+				finish();
 			}
+			
 			break;
 
 		}

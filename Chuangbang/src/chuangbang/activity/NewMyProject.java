@@ -1,4 +1,4 @@
-package chuangbang.activity;
+﻿package chuangbang.activity;
 
 
 import java.io.File;
@@ -39,7 +39,10 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
+<<<<<<< HEAD
 import android.widget.Advanceable;
+=======
+>>>>>>> refs/remotes/origin/master
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,13 +53,16 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class NewMyProject extends Activity implements OnClickListener,Final, OnItemSelectedListener{
+public class NewMyProject extends Activity implements OnClickListener,Final,  OnItemSelectedListener{
+
 	private TableRow trProLogo;
 	private ImageView logoImage;
 
 	private Handler handler;
 	private EditText etProName,etProState,etProDomain,etProDescription,etPainPointer,etSolution,etCompetiors,etAdvantage,
+
 	etBusinessModel,etFinancingAmount,etTransferShare,etTermNumCount;
+
 	private String result,proName,proState,proDomain,proDescString,painPointer,solution,competiors,adavantage,busenessModel;
 	private Integer financingAmount,financingStater,termNumCount,transferShare;
 
@@ -88,16 +94,12 @@ public class NewMyProject extends Activity implements OnClickListener,Final, OnI
 		etBusinessModel=(EditText)findViewById(R.id.et_new_pro_business_model);
 		etFinancingAmount=(EditText)findViewById(R.id.et_new_pro_financing_amount);
 		etTransferShare=(EditText)findViewById(R.id.et_new_pro_transferShare);
-		
-		
-		
-		
-		
+
 		trProLogo=(TableRow)findViewById(R.id.tr_new_pro_logo);
 		btBack=(Button)findViewById(R.id.bt_new_pro_back);
 		btSave=(Button)findViewById(R.id.bt_new_pro_save);
 		logoImage=(ImageView)findViewById(R.id.iv_new_pro_logo);
-
+		
 		sp=(Spinner)findViewById(R.id.sp_my_new_pro_financing_state);
 		list.add("种子轮");
 		list.add("天使轮");

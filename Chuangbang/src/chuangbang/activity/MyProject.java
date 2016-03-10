@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class MyProject extends Activity implements OnItemClickListener,Final{
@@ -31,10 +32,12 @@ public class MyProject extends Activity implements OnItemClickListener,Final{
 	private User currentUser;
 	private BaseAdapter adapter;
 	private BroadcastReceiver receiver;
+	private Button btSave;
+	
 	
 	private void setView(){
 		lvProject=(ListView)findViewById(R.id.lv_project);
-		
+		btSave=(Button)findViewById(R.id.bt_new_project);
 	}
 	
 	private void setOnClick(){
@@ -72,7 +75,9 @@ public class MyProject extends Activity implements OnItemClickListener,Final{
 				data.clear();
 				data.addAll(arg0);
 				adapter.notifyDataSetChanged();
-				
+				if(arg0.size()>2){
+					btSave.setEnabled(false);
+				}
 			}
 			
 			@Override

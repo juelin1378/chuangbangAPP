@@ -5,6 +5,7 @@ public interface Final {
 	 String INTENT_ACTION_CARD="intent_action_card";//名片
 	 String INTENT_ACTION_LOGO="intent_action_logo";//项目logo
 	 String INTENT_ACTION_UPDATE_MY_PROJECT="intent_action_my_project";//更新我的项目
+	 String INTENT_ACTION_UPDATE_MY_PARTNER="intent_action_my_partner";//更新我发布的合伙人需求
 
 	
 	

@@ -38,6 +38,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,13 +49,13 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class NewMyProject extends Activity implements OnClickListener,Final, OnItemClickListener{
+public class NewMyProject extends Activity implements OnClickListener,Final,  OnItemSelectedListener{
 	private TableRow trProLogo;
 	private ImageView logoImage;
 
 	private Handler handler;
 	private EditText etProName,etProState,etProDomain,etProDescription,etPainPointer,etSolution,etCompetiors,etAdvantage,
-	etBusinessModel,etFinancingAmount,etTransferShare;
+	etBusinessModel,etFinancingAmount,etTransferShare,etTermNumCount;;
 	private String result,proName,proState,proDomain,proDescString,painPointer,solution,competiors,adavantage,busenessModel;
 	private Integer financingAmount,financingStater,termNumCount;
 
@@ -78,11 +79,20 @@ public class NewMyProject extends Activity implements OnClickListener,Final, OnI
 		etProState=(EditText)findViewById(R.id.et_new_pro_statu);
 		etProDomain=(EditText)findViewById(R.id.et_new_pro_domain);
 		etProDescription=(EditText)findViewById(R.id.et_new_pro_description);
+		etTermNumCount=(EditText)findViewById(R.id.et_new_pro_term_count);
+		etPainPointer=(EditText)findViewById(R.id.et_new_pro_pain_point);
+		etSolution=(EditText)findViewById(R.id.et_new_pro_solution);
+		etCompetiors=(EditText)findViewById(R.id.et_new_pro_competitors);
+		etAdvantage=(EditText)findViewById(R.id.et_new_pro_advantage);
+		etBusinessModel=(EditText)findViewById(R.id.et_new_pro_business_model);
+		etFinancingAmount=(EditText)findViewById(R.id.et_new_pro_financing_amount);
+		etTransferShare=(EditText)findViewById(R.id.et_new_pro_transferShare);
+		
 		trProLogo=(TableRow)findViewById(R.id.tr_new_pro_logo);
 		btBack=(Button)findViewById(R.id.bt_new_pro_back);
 		btSave=(Button)findViewById(R.id.bt_new_pro_save);
 		logoImage=(ImageView)findViewById(R.id.iv_new_pro_logo);
-
+		
 		sp=(Spinner)findViewById(R.id.sp_my_new_pro_financing_state);
 		list.add("种子轮");
 		list.add("天使轮");
@@ -100,7 +110,7 @@ public class NewMyProject extends Activity implements OnClickListener,Final, OnI
 		trProLogo.setOnClickListener(this);
 		btSave.setOnClickListener(this);
 		btBack.setOnClickListener(this);
-		sp.setOnItemClickListener(this);
+		sp.setOnItemSelectedListener(this);
 	}
 
 
@@ -363,8 +373,10 @@ public class NewMyProject extends Activity implements OnClickListener,Final, OnI
 		super.onDestroy();
 		unregisterReceiver(receiver);
 	}
+	
 	@Override
-	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int position,
+			long arg3) {
 		if(position==0){
 			financingStater=1;
 		}else if(position==1){
@@ -376,8 +388,12 @@ public class NewMyProject extends Activity implements OnClickListener,Final, OnI
 		}else if(position==4){
 			financingStater=12;
 		}
-
-
+		
+	}
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

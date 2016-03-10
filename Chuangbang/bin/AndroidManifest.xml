@@ -156,6 +156,10 @@
         <activity android:name="chuangbang.activity.MyProDetailsActivity"></activity>
         <!-- 合伙人详细页面 -->
 		<activity android:name="chuangbang.activity.PartnerActivity"></activity>
+		<!-- 我发布的合伙人需求 -->
+		<activity android:name="chuangbang.activity.MyPartmerActivity"></activity>
+		<!-- 发布合伙人需求 -->
+		<activity android:name="chuangbang.activity.NewMyPartner"></activity>
         <meta-data
             android:name="EASEMOB_APPKEY"
             android:value="chuangbang#chuangbangchat" />

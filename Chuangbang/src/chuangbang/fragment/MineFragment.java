@@ -24,6 +24,7 @@ import chuangbang.activity.MenuDialog;
 import chuangbang.activity.MineResume;
 import chuangbang.activity.MyFavorite;
 import chuangbang.activity.MyMeetingActivity;
+import chuangbang.activity.MyPartmerActivity;
 import chuangbang.activity.MyProject;
 import chuangbang.activity.MyStatus;
 import chuangbang.activity.R;
@@ -56,7 +57,7 @@ import android.widget.Toast;
 public class MineFragment extends Fragment implements OnClickListener,Final{
 
 
-	private View llMyProject,llSetMine,llMyFavorite,llMineResume,llMyChat,llSetting;
+	private View llMyProject,llSetMine,llMyFavorite,llMineResume,llMyChat,llSetting,llMyPartner;
 	private RoundRectImageView roundImage;
 	private String avatarPath;
 	private byte[] mContent;
@@ -91,6 +92,7 @@ public class MineFragment extends Fragment implements OnClickListener,Final{
 		llMyChat=(View)view.findViewById(R.id.ll_my_chat);
 		tvMyName=(TextView)view.findViewById(R.id.tv_mine_name);
 		llSetting=(View)view.findViewById(R.id.ll_setting);
+		llMyPartner=(View)view.findViewById(R.id.ll_my_partmer);
 		//bt=(Button)view.findViewById(R.id.bt_out_login);
 		/*
 		 * 添加监听
@@ -101,6 +103,7 @@ public class MineFragment extends Fragment implements OnClickListener,Final{
 		llMineResume.setOnClickListener(this);
 		llMyChat.setOnClickListener(this);
 		llSetting.setOnClickListener(this);
+		llMyPartner.setOnClickListener(this);
 		//bt.setOnClickListener(this);
 		roundImage.setOnClickListener(this);
 		handler=new InnerHandler();
@@ -150,10 +153,10 @@ public class MineFragment extends Fragment implements OnClickListener,Final{
 			startActivity(intent);
 
 			break;
-//		case R.id.ll_mine_resume:
-//			intent=new Intent(getActivity(),MineResume.class);
-//			startActivity(intent);
-//			break;
+		case R.id.ll_my_partmer:
+			intent=new Intent(getActivity(),MyPartmerActivity.class);
+			startActivity(intent);
+			break;
 
 			//点击头像
 		case R.id.iv_mine_avater:
